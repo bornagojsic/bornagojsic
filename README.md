@@ -22,6 +22,10 @@ Here are some ideas to get you started:
 [<img align="left" alt="bornagojsic | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram]
 [<img align="left" alt="bornagojsic | Stack Overflow" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/stackoverflow.svg" />][stackoverflow]
 
+<br />
+
+---
+
 <img align="left" alt="codeSTACKr's Github Stats" src="https://github-readme-stats.codestackr.vercel.app/api?username=bornagojsic&show_icons=true&hide_border=true" />
 
 [website]: bornagojsic.from.hr
