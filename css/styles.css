@@ -21,7 +21,7 @@
   --green: #28a745;
   --teal: #1abc9c;
   --cyan: #17a2b8;
-  --white: #fff;
+  /*--white: #fff;*/
   --gray: #6c757d;
   --gray-dark: #343a40;
   --primary: #00bcd4 /*#1abc9c */;
@@ -39,6 +39,14 @@
   --breakpoint-xl: 1200px;
   --font-family-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --white: #f0f0f0;
+  --light-grey: #e4e4e4;
+  --black: #111111;
+  --dark-grey: #272727;
+  --bg: var(--white);
+  --txt: var(--black);
+  --dark-opacity: 0;
+  --light-opacity: 1;
 }
 
 *,
@@ -156,6 +164,85 @@ sub {
 
 sup {
   top: -0.5em;
+}
+
+.checkbox {
+  display: none;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  background: var(--txt);
+  top: 0.45rem;
+  border-radius: 5rem;
+  padding: 0.5rem;
+  height: 2.5rem;
+  width: 5rem;
+  font-size: 1.5rem;
+  transition: background 0.5s ease;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.label .ball {
+  position: absolute;
+  background-color: var(--bg);
+  border-radius: 50%;
+  top: 0.25rem;
+  left: 0.25rem;
+  height: 2rem;
+  width: 2rem;
+  transform: translateX(0);
+  transition: transform 0.3s ease, background-color 0.5s ease;
+}
+
+.fa-galactic-republic {
+  color: var(--black);
+}
+
+.fa-rebel {
+  color: var(--white);
+}
+
+.image {
+  position: absolute;
+  top: 10;
+  left: 10;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image svg {
+  position: absolute;
+  font-size: 5rem;
+  transition: opacity 0.1s ease-in-out 0.2s;
+}
+
+.image .fa-galactic-republic {
+  color: var(--dark-grey);
+  opacity: var(--dark-opacity);
+}
+
+.image .fa-rebel {
+  color: var(--light-grey);
+  opacity: var(--light-opacity);
+}
+
+.checkbox:checked + .content .label .ball {
+  transform: translateX(2.5rem);
+}
+
+.checkbox:checked + .content {
+  --bg: var(--black);
+  --txt: var(--white);
+  --dark-opacity: 1;
+  --light-opacity: 0;
 }
 
 a {
