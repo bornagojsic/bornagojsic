@@ -29,7 +29,7 @@ Here are some ideas to get you started:
 <img align="left" alt="codeSTACKr's Github Stats" src="https://github-readme-stats.codestackr.vercel.app/api?username=bornagojsic&show_icons=true&hide_border=true" />
 
 
-[website]: bornagojsic.from.hr
+[website]: http://bornagojsic.from.hr
 [facebook]: https://www.facebook.com/Bornagojsic
 [instagram]: https://www.instagram.com/bornagojsic/
 [stackoverflow]: https://stackoverflow.com/users/12075938/borna-goj%c5%a1i%c4%87
