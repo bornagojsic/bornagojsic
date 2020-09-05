@@ -69,6 +69,11 @@ body {
   background-color: #fff;
 }
 
+
+.portfolio-img{
+  width: 37.5vw;
+}
+
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }
