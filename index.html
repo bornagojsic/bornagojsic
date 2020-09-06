@@ -49,9 +49,79 @@
                 </div>
             </div>
         </nav>
-        <!-- Masthead-->
+        <!-- Masthead-->        
         <header class="masthead bg-primary text-white text-center">
-            <div class="container d-flex align-items-center flex-column">
+            <div id="canvas" class="container d-flex align-items-center flex-column">
+                <!-- <canvas id="canvas" style="position: absolute;width:100%;height:47.5%"></canvas> -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+                <script type="text/javascript">
+                    function Star() {
+                      this.x = random(-width, width);
+                      this.y = random(-height, height);
+                      this.z = random(width);
+                      this.pz = this.z;
+
+                      this.update = function() {
+                        this.z = this.z - speed;
+                        if (this.z < 1) {
+                          this.z = width;
+                          this.x = random(-width, width);
+                          this.y = random(-height, height);
+                          this.pz = this.z;
+                        }
+                      }
+
+                      this.show = function() {
+                        fill(255);
+                        noStroke();
+
+                        var sx = map(this.x / this.z, 0, 1, 0, width);
+                        var sy = map(this.y / this.z, 0, 1, 0, height);
+
+                        var r = map(this.z, 0, width, 16, 0);
+                        ellipse(sx, sy, r, r);
+
+                        var px = map(this.x / this.pz, 0, 1, 0, width);
+                        var py = map(this.y / this.pz, 0, 1, 0, height);
+
+                        this.pz = this.z;
+
+                        stroke(255);
+                        line(px, py, sx, sy);
+
+                      }
+                    }
+
+                    var stars = [];
+
+                    var speed;
+
+                    function setup() {
+                      cnv = createCanvas(windowWidth, 650);
+                      cnv.parent('canvas');
+                      for (var i = 0; i < 800; i++) {
+                        stars[i] = new Star();
+                      }
+                    }
+
+                    function draw() {
+                      if (mouseY < 700){
+                        if (mouseY < height/2) {
+                          speed = map(mouseY, 0, height/2, 0.5, 50, height);
+                        } else {
+                          speed = map(mouseY, height/2, height, 50, 10, height);
+                        }
+                      } else {
+                        speed = 10;
+                      }
+                      background('#0b0c10');
+                      translate(width / 2, height / 2);
+                      for (var i = 0; i < stars.length; i++) {
+                        stars[i].update();
+                        stars[i].show();
+                      }
+                    }
+                </script>
                 <!-- Masthead Avatar Image-->
                 <img class="masthead-avatar mb-5" src="assets/img/avataaars2.svg" alt="" />
                 <!-- Masthead Heading-->
@@ -481,5 +551,8 @@
         <script src="assets/mail/contact_me.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <!-- p5.js stars -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+        <script src="sketch.js"></script> -->
     </body>
 </html>

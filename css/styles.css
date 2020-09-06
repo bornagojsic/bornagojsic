@@ -69,8 +69,16 @@ body {
   background-color: #fff;
 }
 
-canvas {
+#canvas * {
+  z-index: 1;
+}
+
+#canvas canvas {
+  top: 10vh;
+  position: absolute;
+  z-index: 0;
   display: block;
+  width: 100%;
 }
 
 .portfolio-img{
