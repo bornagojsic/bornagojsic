@@ -102,27 +102,21 @@
                       for (var i = 0; i < 800; i++) {
                         stars[i] = new Star();
                       }
-                      var desk = true;
-                      if (document.getElementById('desk').display) {
-                        desk = true;
-                        document.getElementById('canvas').display = None;
-                      }
                     }
 
                     function draw() {
-                        if (desk) {
-                          if (mouseY < 700) {
-                            if (mouseY < height/2) {
-                              speed = map(mouseY, 0, height/2, 0.5, 20, height);
-                            } else {
-                              speed = map(mouseY, height/2, height, 20, 10, height);
-                            }
-                          } else {
-                            speed = 10;
-                          }
+                      if (document.getElementById('desk').display) {
+                        return;   
+                      }
+                      if (mouseY < 700) {
+                        if (mouseY < height/2) {
+                          speed = map(mouseY, 0, height/2, 0.5, 20, height);
                         } else {
-                          speed = 7.5;
+                          speed = map(mouseY, height/2, height, 20, 10, height);
                         }
+                      } else {
+                        speed = 10;
+                      }
                       background('#0b0c10');
                       translate(width / 2, height / 2);
                       for (var i = 0; i < stars.length; i++) {
