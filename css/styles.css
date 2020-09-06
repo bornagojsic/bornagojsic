@@ -69,6 +69,9 @@ body {
   background-color: #fff;
 }
 
+canvas {
+  display: block;
+}
 
 .portfolio-img{
   width: 37.5vw;
