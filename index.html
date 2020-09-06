@@ -102,19 +102,20 @@
                       for (var i = 0; i < 800; i++) {
                         stars[i] = new Star();
                       }
+                      var desk = true;
+                      if (document.getElementById('desk').display) {
+                        desk = true;
+                      }
                     }
 
                     function draw() {
-                      if (mouseY < 700){
+                      if ((mouseY < 700) && (desk)){
                         if (mouseY < height/2) {
                           speed = map(mouseY, 0, height/2, 0.5, 50, height);
                         } else {
                           speed = map(mouseY, height/2, height, 50, 10, height);
                         }
                       } else {
-                        speed = 10;
-                      }
-                      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
                         speed = 10;
                       }
                       background('#0b0c10');
@@ -125,6 +126,7 @@
                       }
                     }
                 </script>
+                <div id="desk"></div>
                 <!-- Masthead Avatar Image-->
                 <img class="masthead-avatar mb-5" src="assets/img/avataaars2.svg" alt="" />
                 <!-- Masthead Heading-->
