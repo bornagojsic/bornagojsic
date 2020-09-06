@@ -110,12 +110,11 @@
 
                     function draw() {
                         if (desk) {
-                          document.getElementById('desk').innerHTML = "LOREM IPSUM ET GLORIAM DEFENCIS";
                           if (mouseY < 700) {
                             if (mouseY < height/2) {
-                              speed = map(mouseY, 0, height/2, 0.5, 50, height);
+                              speed = map(mouseY, 0, height/2, 0.5, 20, height);
                             } else {
-                              speed = map(mouseY, height/2, height, 50, 10, height);
+                              speed = map(mouseY, height/2, height, 20, 10, height);
                             }
                           } else {
                             speed = 10;
