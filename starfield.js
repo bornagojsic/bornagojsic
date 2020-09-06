@@ -1,16 +1,18 @@
 function Star() {
-  this.x = random(-width, width);
-  this.y = random(-height, height);
+  this.random = function() {
+    this.x = random(-width, width);
+    this.y = random(-height, height);
+    this.pz = this.z;
+  }
+
   this.z = random(width);
-  this.pz = this.z;
+  this.random();
 
   this.update = function() {
     this.z = this.z - speed;
     if (this.z < 1) {
       this.z = width;
-      this.x = random(-width, width);
-      this.y = random(-height, height);
-      this.pz = this.z;
+      this.random();
     }
   }
 
@@ -36,18 +38,21 @@ function Star() {
 }
 
 var stars = [];
-
 var speed;
 
 const minSpeed = 10;
 const maxSpeed = 50;
 
 function setup() {
-  cnv = createCanvas(windowWidth - 20, 650);
+  cnv = createCanvas(windowWidth - 20, windowHeight - 20);
   cnv.parent('canvas');
   for (var i = 0; i < 800; i++) {
     stars[i] = new Star();
   }
+}
+
+function windowResized() {
+   resizeCanvas(windowWidth - 20, windowHeight - 20);
 }
 
 function draw() {

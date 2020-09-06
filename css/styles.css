@@ -74,16 +74,11 @@ body {
 }
 
 #canvas canvas {
-  top: 10vh;
+  top: 0;
   position: absolute;
   z-index: 0;
   display: block;
-  width: 100%;
-
-}
-
-@media only screen and (max-width: 760px) {
-  #desk { display: none; }
+  margin: 10px;
 }
 
 .portfolio-img{
@@ -10153,8 +10148,9 @@ h3 {
   }
 }
 .masthead {
-  padding-top: calc(6rem + 74px);
-  padding-bottom: 6rem;
+  /*padding-top: calc(6rem + 74px);
+  padding-bottom: 6rem;*/
+  height: 100vh;
 }
 .masthead .masthead-heading {
   font-size: 2.75rem;
