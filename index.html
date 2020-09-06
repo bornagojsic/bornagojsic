@@ -109,15 +109,19 @@
                     }
 
                     function draw() {
-                      if ((mouseY < 700) && (desk)){
-                        if (mouseY < height/2) {
-                          speed = map(mouseY, 0, height/2, 0.5, 50, height);
+                        if (desk) {
+                          if (mouseY < 700) {
+                            if (mouseY < height/2) {
+                              speed = map(mouseY, 0, height/2, 0.5, 50, height);
+                            } else {
+                              speed = map(mouseY, height/2, height, 50, 10, height);
+                            }
+                          } else {
+                            speed = 10;
+                          }
                         } else {
-                          speed = map(mouseY, height/2, height, 50, 10, height);
+                          speed = 5;
                         }
-                      } else {
-                        speed = 10;
-                      }
                       background('#0b0c10');
                       translate(width / 2, height / 2);
                       for (var i = 0; i < stars.length; i++) {
