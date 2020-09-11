@@ -39,10 +39,11 @@ function Star() {
 
 function setup() {
   header = document.getElementById('masthead');
-  h = header.height;
+  h = windowHeight * 1.1;
+  console.log(h);
   if ( ( windowWidth >= 800 ) && ( windowHeight >= 600 ) ) {
     header.setAttribute("style","height: 100vh;");
-    h = windowHeight - 20;
+    h = windowHeight;
   }
   cnv = createCanvas(windowWidth - 20, h);
   cnv.parent('canvas');
@@ -67,7 +68,7 @@ const accFactor = 10;
 
 
 function windowResized() {
-   resizeCanvas(windowWidth - 20, windowHeight - 20);
+   resizeCanvas(windowWidth - 20, h - 20);
 }
 
 function mouseClicked() {
