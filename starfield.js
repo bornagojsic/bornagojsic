@@ -87,7 +87,7 @@ function draw() {
       targetSpeed = map(mouseY, (1 + sign) * height/4, (3 + sign) * height/4, avgSpeed + dSpeed, avgSpeed - dSpeed, height);
       speed += (Math.sign(targetSpeed - speed) * acceleration);
     } else {
-      targetSpeed = minSpeed;
+      speed = minSpeed;
     }
   } else {
     speed -= acceleration;
