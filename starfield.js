@@ -54,7 +54,7 @@ function setup() {
   for (var i = 0; i < 800; i++) {
     stars[i] = new Star();
   }
-  speed = minSpeed;
+  speed = 0;
   targetSpeed = minSpeed;
 }
 
@@ -79,7 +79,7 @@ function draw() {
   if (logging) {
     console.log(speed);
   }
-  acceleration = map(speed, 0, targetSpeed, minSpeed / accFactor, maxSpeed / accFactor, maxSpeed);
+  acceleration = map(speed, 0, maxSpeed, minSpeed / accFactor, maxSpeed / accFactor, maxSpeed);
   if (!stop) {
     if ( ( window.innerWidth >= 800 ) && ( window.innerHeight >= 600 ) && (mouseY < height) )  {
       sign = Math.sign(mouseY - height/2);
