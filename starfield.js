@@ -39,10 +39,14 @@ function Star() {
 
 var stars = [];
 var speed;
+var targetSpeed;
 var stop = false;
+var logging = false;
 
 const minSpeed = 10;
 const maxSpeed = 50;
+const avgSpeed = (minSpeed + maxSpeed) / 2;
+const accFactor = 10;
 
 function setup() {
   cnv = createCanvas(windowWidth - 20, windowHeight - 20);
@@ -50,6 +54,8 @@ function setup() {
   for (var i = 0; i < 800; i++) {
     stars[i] = new Star();
   }
+  speed = minSpeed;
+  targetSpeed = minSpeed;
 }
 
 function windowResized() {
@@ -62,21 +68,30 @@ function mouseClicked() {
   }
 }
 
+function keyPressed() {
+  // F2
+  if(keyCode === 113) {
+    logging = !logging;
+  }
+}
+
 function draw() {
+  if (logging) {
+    console.log(speed);
+  }
+  acceleration = map(speed, 0, targetSpeed, minSpeed / accFactor, maxSpeed / accFactor, maxSpeed);
   if (!stop) {
     if ( ( window.innerWidth >= 800 ) && ( window.innerHeight >= 600 ) && (mouseY < height) )  {
-      if (mouseY < height/2) {
-        speed = map(mouseY, 0, height/2, minSpeed, maxSpeed, height);
-      } else {
-        speed = map(mouseY, height/2, height, maxSpeed, minSpeed, height);
-      }
+      sign = Math.sign(mouseY - height/2);
+      dSpeed = sign * (avgSpeed - minSpeed);
+      targetSpeed = map(mouseY, (1 + sign) * height/4, (3 + sign) * height/4, avgSpeed + dSpeed, avgSpeed - dSpeed, height);
+      speed += (Math.sign(targetSpeed - speed) * acceleration);
     } else {
-      speed = minSpeed;
+      targetSpeed = minSpeed;
     }
   } else {
-    if (speed > 0.1) {
-      speed -= map(speed, 0, maxSpeed, 0.1, 10, maxSpeed);
-    } else {
+    speed -= acceleration;
+    if (speed < 0.1) {
       speed = 0;
     }
   }
