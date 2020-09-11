@@ -74,7 +74,11 @@ function draw() {
       speed = minSpeed;
     }
   } else {
-    speed = 0;
+    if (speed > 0.1) {
+      speed -= map(speed, 0, maxSpeed, 0.1, 10, maxSpeed);
+    } else {
+      speed = 0;
+    }
   }
   background('#0b0c10');
   translate(width / 2, height / 2);
