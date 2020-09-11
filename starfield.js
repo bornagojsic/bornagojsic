@@ -81,14 +81,12 @@ function draw() {
   }
   acceleration = map(speed, 0, maxSpeed, minSpeed / accFactor, maxSpeed / accFactor, maxSpeed);
   if (!stop) {
-    if ( ( window.innerWidth >= 800 ) && ( window.innerHeight >= 600 ) && (mouseY < height) )  {
+    if ( ( windowWidth >= 800 ) && ( windowHeight >= 600 ) && (mouseY < height) )  {
       sign = Math.sign(mouseY - height/2);
       dSpeed = sign * (avgSpeed - minSpeed);
       targetSpeed = map(mouseY, (1 + sign) * height/4, (3 + sign) * height/4, avgSpeed + dSpeed, avgSpeed - dSpeed, height);
-      speed += (Math.sign(targetSpeed - speed) * acceleration);
-    } else {
-      speed += (Math.sign(targetSpeed - speed) * acceleration);
     }
+    speed += (Math.sign(targetSpeed - speed) * acceleration);
   } else {
     speed -= acceleration;
     if (speed < 0.1) {
