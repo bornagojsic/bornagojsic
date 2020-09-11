@@ -40,7 +40,7 @@ function Star() {
 function setup() {
   header = document.getElementById('masthead');
   h = windowHeight * 1.1;
-  if ( ( windowWidth >= 800 ) && ( windowHeight >= 600 ) ) {
+  if ( ( windowWidth >= 800 ) && ( windowHeight >= 600 ) && ( windowWidth > 2 * windowHeight ) ) {
     header.setAttribute("style","height: 100vh;");
     h = windowHeight;
   }
@@ -88,7 +88,7 @@ function draw() {
     console.log(speed);
   }
   acceleration = map(speed, 0, maxSpeed, minSpeed / accFactor, maxSpeed / accFactor, maxSpeed);
-  if ( ( windowWidth >= 800 ) && ( windowHeight >= 600 ) && (mouseY < height) )  {
+  if ( ( windowWidth >= 800 ) && ( windowHeight >= 600 ) && ( windowWidth > 2 * windowHeight ) && (mouseY < height) )  {
     if (header.height != "100vh") {
       header.setAttribute("style","height: 100vh;");
       h = windowHeight - 20;
