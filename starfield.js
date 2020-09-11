@@ -54,7 +54,7 @@ function setup() {
   for (var i = 0; i < 800; i++) {
     stars[i] = new Star();
   }
-  speed = 0;
+  speed = minSpeed;
   targetSpeed = minSpeed;
 }
 
