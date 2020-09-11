@@ -56,7 +56,7 @@ function windowResized() {
 }
 
 function draw() {
-  if ( ( window.innerWidth >= 800 ) && ( window.innerHeight >= 600 ) && (mouseY < 700) )  {
+  if ( ( window.innerWidth >= 800 ) && ( window.innerHeight >= 600 ) && (mouseY < height) )  {
     if (mouseY < height/2) {
       speed = map(mouseY, 0, height/2, minSpeed, maxSpeed, height);
     } else {
