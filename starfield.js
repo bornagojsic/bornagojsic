@@ -39,6 +39,7 @@ function Star() {
 
 var stars = [];
 var speed;
+var stop = false;
 
 const minSpeed = 10;
 const maxSpeed = 50;
@@ -55,15 +56,25 @@ function windowResized() {
    resizeCanvas(windowWidth - 20, windowHeight - 20);
 }
 
+function mouseClicked() {
+  if (mouseY < height) {
+    stop = !stop;
+  }
+}
+
 function draw() {
-  if ( ( window.innerWidth >= 800 ) && ( window.innerHeight >= 600 ) && (mouseY < height) )  {
-    if (mouseY < height/2) {
-      speed = map(mouseY, 0, height/2, minSpeed, maxSpeed, height);
+  if (!stop) {
+    if ( ( window.innerWidth >= 800 ) && ( window.innerHeight >= 600 ) && (mouseY < height) )  {
+      if (mouseY < height/2) {
+        speed = map(mouseY, 0, height/2, minSpeed, maxSpeed, height);
+      } else {
+        speed = map(mouseY, height/2, height, maxSpeed, minSpeed, height);
+      }
     } else {
-      speed = map(mouseY, height/2, height, maxSpeed, minSpeed, height);
+      speed = minSpeed;
     }
   } else {
-    speed = minSpeed;
+    speed = 0;
   }
   background('#0b0c10');
   translate(width / 2, height / 2);
