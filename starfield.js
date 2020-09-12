@@ -44,7 +44,7 @@ function setup() {
     header.setAttribute("style","height: 100vh;");
     h = windowHeight;
   }
-  cnv = createCanvas(windowWidth * 1.1, h);
+  cnv = createCanvas(windowWidth - 17.5, h);
   cnv.parent('canvas');
   for (var i = 0; i < 800; i++) {
     stars[i] = new Star();
@@ -71,7 +71,7 @@ function windowResized() {
   if ( ( windowWidth >= 800 ) && ( windowHeight >= 600 ) && ( windowWidth > 2 * windowHeight ) ) {
     h = windowHeight;
   }
-  resizeCanvas(windowWidth, h);
+  resizeCanvas(windowWidth - 17.5, h);
 }
 
 function mouseClicked() {
