@@ -44,7 +44,7 @@ function setup() {
     header.setAttribute("style","height: 100vh;");
     h = windowHeight;
   }
-  cnv = createCanvas(windowWidth - 17.5, h);
+  cnv = createCanvas(windowWidth - dW, h);
   cnv.parent('canvas');
   for (var i = 0; i < 800; i++) {
     stars[i] = new Star();
@@ -64,6 +64,7 @@ const minSpeed = 10;
 const maxSpeed = 50;
 const avgSpeed = (minSpeed + maxSpeed) / 2;
 const accFactor = 10;
+const dW = 15.5;
 
 
 function windowResized() {
@@ -71,7 +72,7 @@ function windowResized() {
   if ( ( windowWidth >= 800 ) && ( windowHeight >= 600 ) && ( windowWidth > 2 * windowHeight ) ) {
     h = windowHeight;
   }
-  resizeCanvas(windowWidth - 15, h);
+  resizeCanvas(windowWidth - dW, h);
 }
 
 function mouseClicked() {
