@@ -71,7 +71,7 @@ function windowResized() {
   if ( ( windowWidth >= 800 ) && ( windowHeight >= 600 ) && ( windowWidth > 2 * windowHeight ) ) {
     h = windowHeight;
   }
-  resizeCanvas(windowWidth - 17.5, h);
+  resizeCanvas(windowWidth - 15, h);
 }
 
 function mouseClicked() {
