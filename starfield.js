@@ -39,7 +39,7 @@ function Star() {
 
 function setup() {
   header = document.getElementById('masthead');
-  h = windowHeight * 1.1;
+  h = windowHeight * 1.05;
   if ( ( windowWidth >= 800 ) && ( windowHeight >= 600 ) && ( windowWidth > 2 * windowHeight ) ) {
     header.setAttribute("style","height: 100vh;");
     h = windowHeight;
@@ -68,7 +68,7 @@ const dW = 15.5;
 
 
 function windowResized() {
-  h = windowHeight * 1.1;
+  h = windowHeight * 1.05;
   if ( ( windowWidth >= 800 ) && ( windowHeight >= 600 ) && ( windowWidth > 2 * windowHeight ) ) {
     h = windowHeight;
   }
