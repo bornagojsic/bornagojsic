@@ -62,7 +62,7 @@ var logging = false;
 
 const minSpeed = 10;
 const maxSpeed = 100;
-var avgSpeed = (minSpeed + maxSpeed) / 2;
+const avgSpeed = (minSpeed + maxSpeed) / 2;
 const accFactor = 10;
 const dW = 15.5;
 
@@ -94,6 +94,7 @@ function draw() {
   }
   acceleration = map(speed, 0, maxSpeed, minSpeed / accFactor, maxSpeed / accFactor, maxSpeed);
   if ( ( windowWidth >= 800 ) && ( windowHeight >= 600 ) && ( windowWidth > 2 * windowHeight ) && (mouseY < height) )  {
+    console.log("DESKTOP")
     if (header.height != "100vh") {
       header.setAttribute("style","height: 100vh;");
       h = windowHeight - 20;
