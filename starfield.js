@@ -61,7 +61,7 @@ var stop = false;
 var logging = false;
 
 const minSpeed = 10;
-const maxSpeed = 50;
+const maxSpeed = 100;
 const avgSpeed = (minSpeed + maxSpeed) / 2;
 const accFactor = 10;
 const dW = 15.5;
