@@ -26,7 +26,7 @@ Here are some ideas to get you started:
 
 ---
 
-<img align="left"  alt="codeSTACKr's Github Stats" src="https://github-readme-stats.codestackr.vercel.app/api?username=bornagojsic&theme=dark&show_icons=true&hide_border=true" />
+[![Borna's GitHub stats](https://github-readme-stats.vercel.app/api?username=bornagojsic&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
 
 
 [website]: http://bornagojsic.from.hr
