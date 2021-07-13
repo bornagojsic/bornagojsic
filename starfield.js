@@ -46,7 +46,7 @@ function setup() {
   }
   cnv = createCanvas(windowWidth - dW, h);
   cnv.parent('canvas');
-  for (var i = 0; i < 800; i++) {
+  for (var i = 0; i < 600; i++) {
     stars[i] = new Star();
   }
   speed = minSpeed;
@@ -61,7 +61,7 @@ var stop = false;
 var logging = false;
 
 const minSpeed = 10;
-const maxSpeed = 100;
+const maxSpeed = 35;
 const avgSpeed = (minSpeed + maxSpeed) / 2;
 const accFactor = 10;
 const dW = 15.5;

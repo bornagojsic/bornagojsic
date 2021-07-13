@@ -63,7 +63,12 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Student - Web Designer - Software Dev</p>
+                <div id="typed">
+                    <h2 class="text-slider-items">
+                    I'm a Student, I'm a Web Designer, I'm a Software Developer
+                    </h2>
+                    <strong class="text-slider"></strong>
+                </div>
             </div>
         </header>
         <!-- Portfolio Section-->
@@ -247,7 +252,7 @@
                     <div class="col-lg-4">
                         <h4 class="text-uppercase mb-4">About Freelancer</h4>
                         <p class="lead mb-0">
-                            Freelance is a free to use, MIT licensed Bootstrap theme created by
+                            Freelancer is a free to use, MIT licensed Bootstrap theme created by
                             <a href="http://startbootstrap.com">Start Bootstrap</a>
                             .
                         </p>
@@ -257,7 +262,7 @@
         </footer>
         <!-- Copyright Section-->
         <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright © Borna Gojšić 2020</small></div>
+            <div class="container"><small>Copyright © Borna Gojšić 2021</small></div>
         </div>
         <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
         <div class="scroll-to-top d-lg-none position-fixed">
@@ -471,11 +476,7 @@
                 </div>
             </div>
         </div>
-        <!-- Redirect -->
-        <script>
-        window.location.href = "http://www.w3schools.com";
-        <\script>
-        <!-- Bootstrap core JS-->
+        <!-- Bootstrap core JS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
         <!-- Third party plugin JS-->
@@ -483,6 +484,29 @@
         <!-- Contact form JS-->
         <!-- <script src="assets/mail/jqBootstrapValidation.js"></script> -->
         <script src="assets/mail/contact_me.js"></script>
+        <!-- Typed.js -->
+        <script src="assets/vendor/typed.js/typed.min.js"></script>
+        <script>
+            if ($(".text-slider").length == 1) {
+                var typed_strings = $(".text-slider-items").text();
+                var typed = new Typed(".text-slider", {
+                    strings: typed_strings.split(", "),
+                    typeSpeed: 50,
+                    loop: true,
+                    backDelay: 2000,
+                    backSpeed: 50,
+                });
+            }
+            // let typed_strings = $(".text-slider-items").text();
+            // var typed_strings = typed_strings.split(', ')
+            // var typed = new Typed('.typed', {
+            //     strings: typed_strings,
+            //     loop: true,
+            //     typeSpeed: 100,
+            //     backSpeed: 50,
+            //     backDelay: 2000
+            // });
+        </script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
         <!-- p5.js stars -->
