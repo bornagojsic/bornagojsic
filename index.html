@@ -15,6 +15,7 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/stars.css" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -51,11 +52,20 @@
         </nav>
         <!-- Masthead-->        
         <header id="masthead" class="masthead bg-primary text-white text-center">
+            <div id="space">
+                <div class="stars"></div>
+                <div class="stars"></div>
+                <div class="stars"></div>
+                <div class="stars"></div>
+                <div class="stars"></div>
+            </div>
             <div id="canvas" class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
                 <img class="masthead-avatar mb-5" src="assets/img/avataaars2.svg" alt="" />
                 <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">Borna Gojšić</h1>
+                <div id='title'>
+                    <h1 class="masthead-heading text-uppercase mb-0">Borna Gojšić</h1>
+                </div>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
@@ -64,9 +74,9 @@
                 </div>
                 <!-- Masthead Subheading-->
                 <div id="typed">
-                    <h2 class="text-slider-items">
-                    I'm a Student, I'm a Web Designer, I'm a Software Developer
-                    </h2>
+                        <h2 id="star-theme" class="text-slider-items">
+                        I'm a Student, I'm a Web Designer, I'm a Software Developer
+                        </h2>
                     <strong class="text-slider"></strong>
                 </div>
             </div>
@@ -515,6 +525,6 @@
         <script src="js/scripts.js"></script>
         <!-- p5.js stars -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
-        <script src="starfield.js"></script>
+        <!-- <script src="starfield.js"></script> -->
     </body>
 </html>

@@ -71,8 +71,12 @@ body {
 
 #typed {
   margin: 0;
-  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /*font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";*/
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.5rem;
+  color: #011;
+  text-align: center;
+  text-shadow: 0 0 3px #6cf;
   /*font-weight: 400;
   line-height: 1.5;*/
 }
