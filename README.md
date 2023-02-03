@@ -15,6 +15,7 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: I love to play the piano
 -->
 
+<!--
 ### Connect with me:
 
 [<img align="left" alt="bornagojsic.from.hr" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website]
@@ -23,7 +24,7 @@ Here are some ideas to get you started:
 [<img align="left" alt="bornagojsic | Stack Overflow" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/stackoverflow.svg" />][stackoverflow]
 
 <br />
-
+-->
 ---
 
 [![Borna's GitHub stats](https://github-readme-stats.vercel.app/api?username=bornagojsic&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
