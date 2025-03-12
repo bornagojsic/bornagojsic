@@ -27,8 +27,9 @@ Here are some ideas to get you started:
 -->
 ---
 
-[![Borna's GitHub stats](https://github-readme-stats.vercel.app/api?username=bornagojsic&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=bornagojsic&layout=compact&theme=tokyonight)
 
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=bornagojsic&show_icons=true&theme=tokyonight)
 
 [website]: http://bornagojsic.from.hr
 [facebook]: https://www.facebook.com/Bornagojsic
