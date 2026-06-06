@@ -31,7 +31,3 @@ Here are some ideas to get you started:
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=bornagojsic&show_icons=true&theme=tokyonight)
 
-[website]: http://bornagojsic.from.hr
-[facebook]: https://www.facebook.com/Bornagojsic
-[instagram]: https://www.instagram.com/bornagojsic/
-[stackoverflow]: https://stackoverflow.com/users/12075938/borna-goj%c5%a1i%c4%87
